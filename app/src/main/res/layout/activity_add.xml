@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:padding="@dimen/mgpd10">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/none"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/mgpd10"
+            android:layout_toEndOf="@+id/btnBack"
+            android:gravity="center_vertical"
+            android:text="@string/color_note"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageButton
+            android:id="@+id/btnMenuItemAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/none"
+            android:src="@drawable/ic_menu_item" />
+
+        <ImageButton
+            android:id="@+id/btnChangeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/btnMenuItemAdd"
+            android:background="@color/none"
+            android:src="@drawable/ic_change_color" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarAdd"
+        android:padding="@dimen/mgpd10">
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/edt_add_title"
+            android:hint="@string/input_title"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/mgpd10"
+            android:singleLine="true"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/edtTitle"
+            android:background="@color/purple_500"
+            android:src="@drawable/ic_alarm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/reminder"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative1">
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:autofillHints=""
+            android:background="@color/white"
+            android:hint="@string/note"
+            android:inputType="text"
+            android:padding="@dimen/mgpd10" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:padding="3dp">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="3dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/view1"
+            android:background="@color/none"
+            android:src="@drawable/ic_undo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/view1"
+            android:background="@color/none"
+            android:src="@drawable/ic_redo" />
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/none"
+            android:src="@drawable/ic_save" />
+    </RelativeLayout>
+
+</RelativeLayout>

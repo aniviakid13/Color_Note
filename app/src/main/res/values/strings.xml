@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Color Note</string>
+    <string name="color_note">Color Note</string>
+    <string name="input_title">Input title</string>
+    <string name="reminder">Reminder</string>
+    <string name="note">Note</string>
+    <string name="title">Title</string>
+</resources>

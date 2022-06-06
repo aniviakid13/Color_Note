@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mgpd10">10dp</dimen>
+    <dimen name="text22">22sp</dimen>
+    <dimen name="mgpd40">40dp</dimen>
+    <dimen name="mgdp20">20dp</dimen>
+    <dimen name="mgdp55">55dp</dimen>
+    <dimen name="mgdp105">105dp</dimen>
+    <dimen name="txt20sp">20sp</dimen>
+</resources>

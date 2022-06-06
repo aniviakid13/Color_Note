@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A1BB86FC"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_200"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/mgpd10"
+            android:paddingEnd="@dimen/mgpd10">
+
+            <ImageButton
+                android:id="@+id/btnDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/none"
+                android:src="@drawable/ic_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/btnDrawer"
+                android:text="@string/color_note"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text22"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btnMenuItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/none"
+                android:src="@drawable/ic_menu_item" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/btnMenuItem"
+                android:background="@color/none"
+                android:src="@drawable/ic_search" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#32808080"
+            android:layout_below="@id/toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+
+            <ImageButton
+                android:id="@+id/btnText"
+                android:layout_width="@dimen/mgpd40"
+                android:layout_height="@dimen/mgpd40"
+                android:background="@drawable/border"
+                android:src="@drawable/ic_text"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAdd"
+                app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+                app:layout_constraintStart_toStartOf="@+id/btnAdd"
+                app:layout_constraintTop_toTopOf="@+id/btnAdd" />
+
+            <ImageButton
+                android:id="@+id/btnCheckList"
+                android:layout_width="@dimen/mgpd40"
+                android:layout_height="@dimen/mgpd40"
+                android:background="@drawable/border"
+                android:src="@drawable/ic_checklist"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAdd"
+
+                app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+                app:layout_constraintStart_toStartOf="@+id/btnAdd"
+                app:layout_constraintTop_toTopOf="@+id/btnAdd" />
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/mgdp20"
+                android:layout_marginBottom="@dimen/mgdp20"
+                android:background="@drawable/border"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
